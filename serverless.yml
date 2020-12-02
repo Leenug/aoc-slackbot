@@ -1,0 +1,27 @@
+service: aoc-slackbot
+
+frameworkVersion: '2'
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: eu-west-2
+
+functions:
+  bot:
+    handler: handler.run
+    events:
+      - schedule: cron(1 * * * ? *)
+    environment:
+      LEADERBOARD_ID: "${env:LEADERBOARD_ID}"
+      LEADERBOARD_SESSION: "${env:LEADERBOARD_SESSION}"
+      SLACK_WEBHOOK: "${env:SLACK_WEBHOOK}"
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
