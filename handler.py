@@ -67,6 +67,9 @@ def get_new_stars(leaderboard):
 
 def send_webhook(msg):
     """ Send the slack webhook """
+    # Allow ignoring posting to Slack, for local
+    if SLACK_WEBHOOK == 'ignore':
+        return
     slack_data = {
         "username": "AoC Starbot",
         "icon_emoji": "robot_face",
