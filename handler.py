@@ -92,3 +92,8 @@ def run(event, context):
 
     if msg != "":
         send_webhook(msg)
+
+
+# If running locally
+if __name__ == '__main__':
+    run(None, None)
