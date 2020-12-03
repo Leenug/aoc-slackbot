@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "gousto-aoc-slackbot"
+name = "aoc-slackbot"
 version = "0.1.0"
-description = ""
-authors = ["Lee Nugent <lee.nugent@gousto.co.uk>"]
+description = "A quick and dirty slack webhook bot that announces when members of a private leaderboard achieve a star!"
+authors = ["Lee Nugent <lee@leenug.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
