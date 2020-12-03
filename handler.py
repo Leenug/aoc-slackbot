@@ -35,7 +35,7 @@ def build_message(new_stars):
         ":star: Get in! *{name}* just bagged a star. Their total is now *{stars}* stars.\n",
         ":star: DingDing! *{name}* only just went and got a star, that makes *{stars}*.\n",
         ":star: Is it a Bird? Is it a Plane? No, it's *{name}* with *{stars}* stars.\n",
-        ":star: BREAKNIG NEWS: *{name}* is smashing it with {stars} stars.\n"
+        ":star: BREAKING NEWS: *{name}* is smashing it with {stars} stars.\n"
     ]
 
     for member in new_stars:
