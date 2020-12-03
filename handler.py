@@ -18,6 +18,10 @@ LEADERBOARD_URL = "https://adventofcode.com/{}/leaderboard/private/view/{}".form
 
 def get_leader_board():
     """ Grab the Leaderboard from AoC """
+    # Allow local JSON to avoid HTTP calls
+    if LEADERBOARD_USE_LOCAL:
+        with open("local_leaderboard.json") as f:
+            return json.load(f)
     r = requests.get("{}.json".format(LEADERBOARD_URL),
                      cookies={"session": LEADERBOARD_SESSION})
 
