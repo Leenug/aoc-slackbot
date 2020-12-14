@@ -24,3 +24,6 @@ __pycache__
 .env
 .env.production
 .env.dev
+
+# Local testing
+local_leaderboard.json
