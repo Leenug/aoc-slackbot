@@ -18,6 +18,8 @@ functions:
       LEADERBOARD_ID: "${env:LEADERBOARD_ID}"
       LEADERBOARD_SESSION: "${env:LEADERBOARD_SESSION}"
       SLACK_WEBHOOK: "${env:SLACK_WEBHOOK}"
+      LEADERBOARD_TEAMS: "${env:LEADERBOARD_TEAMS}"
+      LEADERBOARD_USE_LOCAL: "${env:LEADERBOARD_USE_LOCAL}"
 
 plugins:
   - serverless-python-requirements
