@@ -27,3 +27,4 @@ __pycache__
 
 # Local testing
 local_leaderboard.json
+team_members.py
