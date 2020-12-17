@@ -6,6 +6,11 @@ import json
 import os
 import random
 
+try:
+    from team_members import TEAM_MEMBERS
+except ImportError:
+    TEAM_MEMBERS = None
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
@@ -14,19 +19,6 @@ LEADERBOARD_SESSION = os.environ['LEADERBOARD_SESSION']
 SLACK_WEBHOOK = os.environ['SLACK_WEBHOOK']
 LEADERBOARD_URL = "https://adventofcode.com/{}/leaderboard/private/view/{}".format(
     datetime.datetime.today().year, LEADERBOARD_ID)
-# The teams should be something like:
-# Team 1=1,2,3;Team 2=4,5,6;Team 3=;Team 4=7
-LEADERBOARD_TEAMS = {
-    # Split members with ','
-    team_name: list(filter(None, members_str.split(',')))
-    for team_name, members_str in (
-        # Split name and members with '='
-        team_str.split('=')
-        # Split teams with ';'
-        for team_str in os.environ['LEADERBOARD_TEAMS'].split(';')
-        if team_str
-    )
-}
 LEADERBOARD_USE_LOCAL = bool(os.environ['LEADERBOARD_USE_LOCAL'])
 LEADERBOARD_SAVE_LOCAL = bool(os.environ.get('LEADERBOARD_SAVE_LOCAL'))
 
@@ -75,6 +67,9 @@ def build_message(new_stars, team_leaderboard):
 
 
 def get_team_leaderboard(leaderboard, interval=1 * 60 * 60, max_count=5):
+    if TEAM_MEMBERS is None:
+        print("No TEAM_MEMBERS specified")
+        return ""
     leaderboard_members = leaderboard['members']
     # Get all the members we can by team
     teams_members = {
@@ -83,7 +78,7 @@ def get_team_leaderboard(leaderboard, interval=1 * 60 * 60, max_count=5):
             for member_id in members
             if member_id in leaderboard_members
         ]
-        for team_name, members in LEADERBOARD_TEAMS.items()
+        for team_name, members in TEAM_MEMBERS.items()
     }
     # Find all the IDs we know about
     member_ids_in_teams = {
@@ -100,7 +95,7 @@ def get_team_leaderboard(leaderboard, interval=1 * 60 * 60, max_count=5):
     # Find IDs that are mis-typed or not in the leaderboard
     missing_member_ids = {
         member_id
-        for team_name, members in LEADERBOARD_TEAMS.items()
+        for team_name, members in TEAM_MEMBERS.items()
         for member_id in members
         if member_id not in leaderboard_members
     }
@@ -121,6 +116,10 @@ def get_team_leaderboard(leaderboard, interval=1 * 60 * 60, max_count=5):
             f"{member['id']}\t{member['name']}"
             for member in teams_members['Unknown']
         ))
+    for name, members in teams_members.items():
+        print(f"Team {name} with {len(members)} members:")
+        for member in members:
+            print(f"  * {member['name']} ({member['id']})")
 
     # Calculate team scores
     teams_scores = {

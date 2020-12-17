@@ -13,6 +13,8 @@ The script utilises `.env` files for config, rename `.env.example` to `.env` and
 
 `SLACK_WEBHOOK` The slack webhook URL to post to
 
+To set up team members copy `team_members_example.py` to `team_members.py`
+
 ## Deploy
 Assuming you have your AWS credentials configured correctly run: 
 ```
