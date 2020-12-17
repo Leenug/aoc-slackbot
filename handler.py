@@ -28,6 +28,7 @@ LEADERBOARD_TEAMS = {
     )
 }
 LEADERBOARD_USE_LOCAL = bool(os.environ['LEADERBOARD_USE_LOCAL'])
+LEADERBOARD_SAVE_LOCAL = bool(os.environ.get('LEADERBOARD_SAVE_LOCAL'))
 
 
 def get_leader_board():
@@ -42,7 +43,13 @@ def get_leader_board():
     if r.status_code != requests.codes.ok:
         print("Error retrieving leaderboard")
 
-    return r.json()
+    leaderboard = r.json()
+
+    if LEADERBOARD_SAVE_LOCAL:
+        with open("local_leaderboard.json", "w") as f:
+            json.dump(leaderboard, f)
+
+    return leaderboard
 
 
 def build_message(new_stars, team_leaderboard):
