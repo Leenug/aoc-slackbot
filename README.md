@@ -13,6 +13,8 @@ The script utilises `.env` files for config, rename `.env.example` to `.env` and
 
 `SLACK_WEBHOOK` The slack webhook URL to post to
 
+`INTERVAL_HOURS` The number of hours between each interval (default: 1)
+
 To set up team members copy `team_members_example.py` to `team_members.py`
 
 ## Deploy

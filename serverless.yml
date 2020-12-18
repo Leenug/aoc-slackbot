@@ -13,7 +13,7 @@ functions:
   bot:
     handler: handler.run
     events:
-      - schedule: cron(1 * * * ? *)
+      - schedule: cron(1 */2 * * ? *)
     environment:
       LEADERBOARD_ID: "${env:LEADERBOARD_ID}"
       LEADERBOARD_SESSION: "${env:LEADERBOARD_SESSION}"

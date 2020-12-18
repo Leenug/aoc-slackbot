@@ -66,7 +66,7 @@ def build_message(new_stars, team_leaderboard):
     return str
 
 
-def get_team_leaderboard(leaderboard, interval=1 * 60 * 60, max_count=5):
+def get_team_leaderboard(leaderboard, interval=int(os.environ['INTERVAL_HOURS']) * 60 * 60, max_count=5):
     if TEAM_MEMBERS is None:
         print("No TEAM_MEMBERS specified")
         return ""
@@ -161,7 +161,7 @@ def get_team_leaderboard(leaderboard, interval=1 * 60 * 60, max_count=5):
 
 def get_new_stars(leaderboard):
     """ Format the payload of the leaderboard to something more useful, filter to stars only gained since last run """
-    last_run = int(time.time()) - 3600
+    last_run = int(time.time()) - int(os.environ['INTERVAL_HOURS']) * 60 * 60
     new_stars = []
 
     for member in leaderboard.values():
