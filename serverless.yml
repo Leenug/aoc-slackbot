@@ -20,10 +20,10 @@ functions:
       SLACK_WEBHOOK: "${env:SLACK_WEBHOOK}"
       LEADERBOARD_TEAMS: "${env:LEADERBOARD_TEAMS}"
       LEADERBOARD_USE_LOCAL: "${env:LEADERBOARD_USE_LOCAL}"
+      INTERVAL_HOURS: "${env:INTERVAL_HOURS}"
 
 plugins:
   - serverless-python-requirements
-
 custom:
   pythonRequirements:
     dockerizePip: non-linux

@@ -22,18 +22,19 @@ LEADERBOARD_URL = "https://adventofcode.com/{}/leaderboard/private/view/{}".form
 LEADERBOARD_USE_LOCAL = bool(os.environ['LEADERBOARD_USE_LOCAL'])
 LEADERBOARD_SAVE_LOCAL = bool(os.environ.get('LEADERBOARD_SAVE_LOCAL'))
 
-
 def get_leader_board():
     """ Grab the Leaderboard from AoC """
     # Allow local JSON to avoid HTTP calls
     if LEADERBOARD_USE_LOCAL:
         with open("local_leaderboard.json") as f:
             return json.load(f)
+            
     r = requests.get("{}.json".format(LEADERBOARD_URL),
                      cookies={"session": LEADERBOARD_SESSION})
 
     if r.status_code != requests.codes.ok:
         print("Error retrieving leaderboard")
+
 
     leaderboard = r.json()
 
