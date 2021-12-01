@@ -18,6 +18,7 @@ TEAM_MEMBERS = {
     'Kimchi': [
         "959686",  # Sasho Marinov
         "960687",  # Do Young Kim
+        "1631181", # Josh Wreford
     ],
     "Bento": [
         "635495",  # Jamie Coombs
