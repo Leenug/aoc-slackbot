@@ -3,7 +3,7 @@
 TEAM_MEMBERS = {
     "Carrots": [
         "956865",  # Lee Nugent
-        "979941",  # Joe Wood
+        "1597002",  # Joe Wood
         "1548925",  # Pedro
     ],
     "Pakchois": [
