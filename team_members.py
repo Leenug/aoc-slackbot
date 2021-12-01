@@ -38,5 +38,8 @@ TEAM_MEMBERS = {
     "Kales": [
         "979912",  # Rianne McCartney
         "1992",  # James Monger
+    ],
+    "Fennels": [
+        "1552781",  # James Roberts
     ]
 }
