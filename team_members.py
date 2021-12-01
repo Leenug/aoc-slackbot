@@ -14,7 +14,6 @@ TEAM_MEMBERS = {
         "1520324",  # Matt Bell
         "1522520",  # Mike Wyer
         "960018",  # Alex Kelly
-        "1306614",  # James Carson
     ],
     'Kimchi': [
         "959686",  # Sasho Marinov
@@ -33,7 +32,6 @@ TEAM_MEMBERS = {
         "1143182",  # James Hallam
         "966635",  # Shane Dowling
         "1610353",  # Cheuk Ho Chan
-        "1306614",  # James Carson
     ],
     "Kales": [
         "979912",  # Rianne McCartney
