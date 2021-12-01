@@ -18,5 +18,9 @@ TEAM_MEMBERS = {
     ],
     "Bento" :  [
         "635495", # Jamie Coombs
+    ],
+     "Kales" :  [
+        "979912", # Rianne McCartney
+        "1992", # James Monger
     ]
 }
