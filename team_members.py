@@ -16,6 +16,10 @@ TEAM_MEMBERS = {
         "960018",  # Alex Kelly
         "1306614", # James Carson
     ],
+    'Kimchi': [
+        "959686",  # Sasho Marinov
+        "960687",  # Do Young Kim
+    ],
     "Bento" :  [
         "635495", # Jamie Coombs
     ]
