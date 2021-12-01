@@ -15,5 +15,8 @@ TEAM_MEMBERS = {
         "1522520", # Mike Wyer
         "960018",  # Alex Kelly
         "1306614", # James Carson
+    ],
+    "Bento" :  [
+        "635495", # Jamie Coombs
     ]
 }
