@@ -53,7 +53,10 @@ def build_message(new_stars, team_leaderboard):
         ":star: Get in! *{name}* just bagged a star. Their total is now *{stars}* stars.\n",
         ":star: DingDing! *{name}* only just went and got a star, that makes *{stars}*.\n",
         ":star: Is it a Bird? Is it a Plane? No, it's *{name}* with *{stars}* stars.\n",
-        ":star: BREAKING NEWS: *{name}* is smashing it with *{stars}* stars.\n"
+        ":star: BREAKING NEWS: *{name}* is smashing it with *{stars}* stars.\n",
+        ":star: Look at *{name}*'s *{stars}* stars. Look how they shine for you...\n",
+        ":star: *{name}* So why do you wanna go and put *{stars}* stars in their eyes?...\n",
+        ":star: Hey *{name}* you've got *{stars}* stars, get your game on, go play...\n",
     ]
 
     for member in new_stars:
