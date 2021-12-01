@@ -18,5 +18,12 @@ TEAM_MEMBERS = {
     ],
     "Bento" :  [
         "635495", # Jamie Coombs
-    ]
+    ],
+
+    "Pumpkins": [
+        "960687", # Nathan
+        "1526226", # Ken
+        "1520343", # Kenny
+        "1520317", # Arjun
+    ],
 }
