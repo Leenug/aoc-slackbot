@@ -53,12 +53,18 @@ def build_message(new_stars, team_leaderboard):
         ":star: Get in! *{name}* just bagged a star. Their total is now *{stars}* stars.\n",
         ":star: DingDing! *{name}* only just went and got a star, that makes *{stars}*.\n",
         ":star: Is it a Bird? Is it a Plane? No, it's *{name}* with *{stars}* stars.\n",
-        ":star: BREAKING NEWS: *{name}* is smashing it with *{stars}* stars.\n"
+        ":star: BREAKING NEWS: *{name}* is smashing it with *{stars}* stars.\n",
+        ":star: Look at *{name}*'s *{stars}* stars. Look how they shine for you...\n",
+        ":star: *{name}* So why do you wanna go and put *{stars}* stars in their eyes?...\n",
+        ":star: Hey *{name}* you've got *{stars}* stars, get your game on, go play...\n",
     ]
 
     for member in new_stars:
         msg = random.choice(messages)
         str += msg.format(name=member['name'], stars=member['stars'])
+
+    if not str:
+        return ""
 
     if team_leaderboard:
         str += "\n~~~ Team Leaderboard ~~~\n"
@@ -81,18 +87,14 @@ def get_team_leaderboard(leaderboard, interval=int(os.environ['INTERVAL_HOURS'])
         ]
         for team_name, members in TEAM_MEMBERS.items()
     }
+
     # Find all the IDs we know about
     member_ids_in_teams = {
         member['id']
         for members in teams_members.values()
         for member in members
     }
-    # Add all other IDs to the 'Unknown' team
-    teams_members['Unknown'] = [
-        member
-        for member_id, member in leaderboard_members.items()
-        if member_id not in member_ids_in_teams
-    ]
+
     # Find IDs that are mis-typed or not in the leaderboard
     missing_member_ids = {
         member_id
@@ -111,29 +113,20 @@ def get_team_leaderboard(leaderboard, interval=int(os.environ['INTERVAL_HOURS'])
             if member_id in missing_member_ids
         ))
     # Also warning message about unknown
-    if teams_members['Unknown']:
-        print(f"There are {len(teams_members['Unknown'])} unknown members:")
-        print("\n".join(
-            f"{member['id']}\t{member['name']}"
-            for member in teams_members['Unknown']
-        ))
     for name, members in teams_members.items():
         print(f"Team {name} with {len(members)} members:")
         for member in members:
             print(f"  * {member['name']} ({member['id']})")
 
     # Calculate team scores
-    teams_scores = {
-        team_name: sum(
-            member['stars']
-            for member in members
-        )
-        for team_name, members in teams_members.items()
-    }
+    teams_scores = {}
+
+    for team_name, members in teams_members.items():
+        score = sum(member['stars'] for member in members) / len(members)
+        teams_scores[team_name] = round(score, 1)
 
     team_scores = "\n".join(
-        f"{position}. {team_name}: {team_score} "
-        f"({len(teams_members[team_name])} members)"
+        f"{position}. {team_name}: {team_score}"
         for position, (team_name, team_score)
         # Sort teams by score, descending
         # Add the position with `enumerate`
@@ -152,10 +145,6 @@ def get_team_leaderboard(leaderboard, interval=int(os.environ['INTERVAL_HOURS'])
         for members in teams_members.values()
         for member in members
     )
-    # Only add to Slack message if something changed in the last hour
-    last_run = int(time.time()) - interval
-    if most_recent_star < last_run:
-        return ""
 
     return team_scores
 
