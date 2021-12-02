@@ -22,6 +22,7 @@ TEAM_MEMBERS = {
         "959686",  # Sasho Marinov
         "960687",  # Do Young Kim
         "1631181", # Josh Wreford
+        "1142743",  # Irene Iriarte
     ],
     "Bento": [
         "635495",  # Jamie Coombs
