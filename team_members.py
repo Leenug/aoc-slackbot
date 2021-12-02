@@ -9,6 +9,7 @@ TEAM_MEMBERS = {
     "Pakchois": [
         "1520356",  # Dan Paddon
         "1593139",  # James Davies
+        "29692", # Conrad Godfrey
     ],
     "Sprouts": [
         "1520324",  # Matt Bell
