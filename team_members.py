@@ -40,5 +40,10 @@ TEAM_MEMBERS = {
     ],
     "Fennels": [
         "1552781",  # James Roberts
+    ],
+    "Radishes": [
+        "1234320", # Olga Dominguez
+        "1641211", # Jason Lafferty
+        "1551520", # Balint Dezso
     ]
 }
