@@ -12,6 +12,7 @@ TEAM_MEMBERS = {
         "29692", # Conrad Godfrey
         "1623856", # Chloe Mingay
         "1712779", # Samuel Parrott
+        "1520569", # James Flemington
     ],
     "Sprouts": [
         "1520324",  # Matt Bell
