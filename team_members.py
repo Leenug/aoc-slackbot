@@ -22,10 +22,12 @@ TEAM_MEMBERS = {
         "959686",  # Sasho Marinov
         "960687",  # Do Young Kim
         "1631181", # Josh Wreford
-        "1142743",  # Irene Iriarte
     ],
     "Bento": [
         "635495",  # Jamie Coombs
+        "1009702", # Jiazhen Xie
+        "1716997", # Eliza Plowden
+        "1717245", # Anthony Donovan
     ],
     "Pumpkins": [
         "960687",  # Nathan
