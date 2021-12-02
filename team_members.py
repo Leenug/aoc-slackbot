@@ -8,8 +8,10 @@ TEAM_MEMBERS = {
     ],
     "Pakchois": [
         "1520356",  # Dan Paddon
-        "1593139",  # James Davies
+        "1593139",  # James Davis
         "29692", # Conrad Godfrey
+        "1623856", # Chloe Mingay
+        "1712779", # Samuel Parrott
     ],
     "Sprouts": [
         "1520324",  # Matt Bell
