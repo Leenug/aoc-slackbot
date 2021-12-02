@@ -5,7 +5,6 @@ import requests
 import json
 import os
 import random
-import math
 
 try:
     from team_members import TEAM_MEMBERS
@@ -64,6 +63,9 @@ def build_message(new_stars, team_leaderboard):
         msg = random.choice(messages)
         str += msg.format(name=member['name'], stars=member['stars'])
 
+    if not str:
+        return ""
+
     if team_leaderboard:
         str += "\n~~~ Team Leaderboard ~~~\n"
         str += "\n" + team_leaderboard
@@ -85,6 +87,7 @@ def get_team_leaderboard(leaderboard, interval=int(os.environ['INTERVAL_HOURS'])
         ]
         for team_name, members in TEAM_MEMBERS.items()
     }
+
     # Find all the IDs we know about
     member_ids_in_teams = {
         member['id']
@@ -142,10 +145,6 @@ def get_team_leaderboard(leaderboard, interval=int(os.environ['INTERVAL_HOURS'])
         for members in teams_members.values()
         for member in members
     )
-    # Only add to Slack message if something changed in the last hour
-    last_run = int(time.time()) - interval
-    if most_recent_star < last_run:
-        return ""
 
     return team_scores
 
