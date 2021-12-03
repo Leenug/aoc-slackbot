@@ -1,4 +1,4 @@
-## Obtain your ID by viewing this JSON version of the leaderboard: https://adventofcode.com/2021/leaderboard/private/view/956865.json
+# Obtain your ID by viewing this JSON version of the leaderboard: https://adventofcode.com/2021/leaderboard/private/view/956865.json
 
 TEAM_MEMBERS = {
     "Carrots": [
@@ -9,9 +9,9 @@ TEAM_MEMBERS = {
     "Pakchois": [
         "1520356",  # Dan Paddon
         "1593139",  # James Davis
-        "29692", # Conrad Godfrey
-        "1623856", # Chloe Mingay
-        "1712779", # Samuel Parrott
+        "29692",  # Conrad Godfrey
+        "1623856",  # Chloe Mingay
+        "1712779",  # Samuel Parrott
     ],
     "Sprouts": [
         "1520324",  # Matt Bell
@@ -21,7 +21,7 @@ TEAM_MEMBERS = {
     'Kimchi': [
         "959686",  # Sasho Marinov
         "960687",  # Do Young Kim
-        "1631181", # Josh Wreford
+        "1631181",  # Josh Wreford
         "1142743",  # Irene Iriarte
     ],
     "Bento": [
@@ -38,6 +38,7 @@ TEAM_MEMBERS = {
         "1143182",  # James Hallam
         "966635",  # Shane Dowling
         "1610353",  # Cheuk Ho Chan
+        "1722709",  # Ian Holmes
     ],
     "Kales": [
         "979912",  # Rianne McCartney
@@ -47,9 +48,9 @@ TEAM_MEMBERS = {
         "1552781",  # James Roberts
     ],
     "Radishes": [
-        "1234320", # Olga Dominguez
-        "1641211", # Jason Lafferty
-        "1551520", # Balint Dezso
-        "1306146", # Rob Kennedy
+        "1234320",  # Olga Dominguez
+        "1641211",  # Jason Lafferty
+        "1551520",  # Balint Dezso
+        "1306146",  # Rob Kennedy
     ]
 }
