@@ -26,6 +26,7 @@ TEAM_MEMBERS = {
     ],
     "Bento": [
         "635495",  # Jamie Coombs
+        "1009702", # Jiazhen Xie
     ],
     "Pumpkins": [
         "960687",  # Nathan
