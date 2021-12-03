@@ -12,6 +12,7 @@ TEAM_MEMBERS = {
         "29692",  # Conrad Godfrey
         "1623856",  # Chloe Mingay
         "1712779",  # Samuel Parrott
+        "1520569",  # James Flemington
     ],
     "Sprouts": [
         "1520324",  # Matt Bell
@@ -27,6 +28,8 @@ TEAM_MEMBERS = {
     "Bento": [
         "635495",  # Jamie Coombs
         "1009702", # Jiazhen Xie
+        "1716997",  # Eliza Plowden
+        "1717245",  # Anthony Donovan
     ],
     "Pumpkins": [
         "960687",  # Nathan
