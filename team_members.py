@@ -24,6 +24,7 @@ TEAM_MEMBERS = {
         "960687",  # Do Young Kim
         "1631181",  # Josh Wreford
         "1142743",  # Irene Iriarte
+        "1777968",  # Haydn Welch
     ],
     "Bento": [
         "635495",  # Jamie Coombs
