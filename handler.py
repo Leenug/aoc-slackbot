@@ -186,7 +186,7 @@ def run(event, context):
 
     leaderboard = get_leader_board()
     stars = get_new_stars(leaderboard["members"])
-    team_leaderboard = get_team_leaderboard(leaderboard)
+    team_leaderboard = get_team_leaderboard(leaderboard=leaderboard, max_count=15)
     msg = build_message(stars, team_leaderboard)
 
     print(msg)
