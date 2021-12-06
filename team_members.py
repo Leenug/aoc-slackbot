@@ -29,7 +29,7 @@ TEAM_MEMBERS = {
     ],
     "Bento": [
         "635495",  # Jamie Coombs
-        "1009702", # Jiazhen Xie
+        "1009702",  # Jiazhen Xie
         "1716997",  # Eliza Plowden
         "1717245",  # Anthony Donovan
     ],
@@ -44,6 +44,7 @@ TEAM_MEMBERS = {
         "966635",  # Shane Dowling
         "1610353",  # Cheuk Ho Chan
         "1722709",  # Ian Holmes
+        "806667",  # Pete Watts
     ],
     "Kales": [
         "979912",  # Rianne McCartney
