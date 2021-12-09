@@ -57,5 +57,10 @@ TEAM_MEMBERS = {
         "1641211",  # Jason Lafferty
         "1551520",  # Balint Dezso
         "1306146",  # Rob Kennedy
+    ],
+    "Haricots": [
+        "959379",   # David Torres
+        "1622439",  # Jess
+        "982442",   # Kira Slobodina
     ]
 }
