@@ -20,6 +20,12 @@ TEAM_MEMBERS = {
         "1522520",  # Mike Wyer
         "960018",  # Alex Kelly
     ],
+    "Bento" :  [
+        "635495", # Jamie Coombs
+    ],
+     "Kales" :  [
+        "979912", # Rianne McCartney
+    ],
     'Kimchi': [
         "959686",  # Sasho Marinov
         "960687",  # Do Young Kim
@@ -45,10 +51,6 @@ TEAM_MEMBERS = {
         "1610353",  # Cheuk Ho Chan
         "1722709",  # Ian Holmes
         "806667",  # Pete Watts
-    ],
-    "Kales": [
-        "979912",  # Rianne McCartney
-        "1992",  # James Monger
     ],
     "Fennels": [
         "1552781",  # James Roberts
